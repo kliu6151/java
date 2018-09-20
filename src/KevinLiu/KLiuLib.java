@@ -52,9 +52,19 @@ public class KLiuLib {
             }
             else                   //Fibonacci sequence's formula//
                 a = a + b;
-                b = a + b;
+            b = a + b;
         }
         return(num == a || num == b);
+    }
+    public static void multiplicationTable(int base, int range)
+    {
+        int i = 0;
+        while(i<=range)
+        {
+            System.out.print(base*i + ",");
+            i++;
+        }
+        return;
     }
     public static int leastCommonMultiple(int a, int b, int c)
     {
@@ -65,7 +75,7 @@ public class KLiuLib {
             {
                 break;
             }
-            else if (i>=Integer.MAX_VALUE-1)//Makes sure that the max value isn't printed out, if the LCM of a,b and c are greater than max value//
+            else if(i>=Integer.MAX_VALUE-1)//Makes sure that the max value isn't printed out, if the LCM of a,b and c are greater than max value//
             {
                 System.out.println("No LCM was founded");
                 System.exit(1);

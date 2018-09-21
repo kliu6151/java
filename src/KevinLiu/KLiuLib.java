@@ -1,6 +1,7 @@
 package KevinLiu;
 
 public class KLiuLib {
+    //Reverses string and compares if they are equal or not//
     public static boolean isPalindrome(String str)
     {
         String str2="";
@@ -12,6 +13,7 @@ public class KLiuLib {
         }
         return (str.toLowerCase().equals(str2.toLowerCase())); //compares both strings in lowercase//
     }
+    //Removes the first occurrence of subStr//
     public static String cutOut(String mainStr,String subStr)
     {
         String hold; //hold and hold2 is here to store different parts of mainStr in case the subStr is identified in the middle//
@@ -28,6 +30,9 @@ public class KLiuLib {
         }
         return mainStr;
     }
+    /*Changes "/" to "-" and switches month with day
+      For example, 05/21/01 becomes 21-05-01
+    */
     public static String dateStr(String str)
     {
         if (str.substring(2,3).equals("/") && str.substring(5,6).equals("/"))
@@ -36,6 +41,7 @@ public class KLiuLib {
         }
         return str;
     }
+    //Checks to see if the number is in the fibonacci sequence or not//
     public static boolean isFibonacci(int num)
     {
         int a = 1;
@@ -56,6 +62,7 @@ public class KLiuLib {
         }
         return(num == a || num == b);
     }
+    //Prints out the multiplicative results of the base.//
     public static void multiplicationTable(int base, int range)
     {
         int i = 0;
@@ -65,6 +72,7 @@ public class KLiuLib {
             i++;
         }
     }
+    //Looks for the first 3 LCMs for the 3 numbers//
     public static int leastCommonMultiple(int a, int b, int c)
     {
         int i = Math.min(a,Math.min(b,c)); //i starts at the lowest value-efficiency//

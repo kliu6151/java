@@ -7,15 +7,15 @@ public class KLiuLib {
         int i=str.length()-1; //starts from the end//
         while(i>=0)
         {
-            str2+=str.substring(i,i+1); //takes each letter reversed//
+            str2 = str2 + str.substring(i,i+1); //takes each letter reversed//
             i--;
         }
         return (str.toLowerCase().equals(str2.toLowerCase())); //compares both strings in lowercase//
     }
     public static String cutOut(String mainStr,String subStr)
     {
-        String hold=""; //hold and hold2 is here to store different parts of mainStr in case the subStr is identified in the middle//
-        String hold2="";
+        String hold; //hold and hold2 is here to store different parts of mainStr in case the subStr is identified in the middle//
+        String hold2;
         if(mainStr.contains(subStr) && mainStr.indexOf(subStr)==0) //Removes subStr when it appears in the beginning of mainStr//
         {
             mainStr = mainStr.substring(mainStr.indexOf(subStr)+subStr.length());
@@ -23,7 +23,7 @@ public class KLiuLib {
         else //if subStr appears first in the middle, then it removes subStr and adds the remaining string together//
         {
             hold = mainStr.substring(0,mainStr.indexOf(subStr));
-            hold2= mainStr.substring(mainStr.indexOf(subStr)+subStr.length()+1,mainStr.length());
+            hold2= mainStr.substring(mainStr.indexOf(subStr)+subStr.length()+1);
             mainStr = hold+hold2;
         }
         return mainStr;
@@ -52,7 +52,7 @@ public class KLiuLib {
             }
             else                   //Fibonacci sequence's formula//
                 a = a + b;
-            b = a + b;
+                b = a + b;
         }
         return(num == a || num == b);
     }
@@ -64,7 +64,6 @@ public class KLiuLib {
             System.out.print(base*i + ",");
             i++;
         }
-        return;
     }
     public static int leastCommonMultiple(int a, int b, int c)
     {
@@ -87,5 +86,4 @@ public class KLiuLib {
         }
         return i;
     }
-
 }

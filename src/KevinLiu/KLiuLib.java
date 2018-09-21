@@ -42,17 +42,17 @@ public class KLiuLib {
         return str;
     }
     //Checks to see if the number is in the fibonacci sequence or not//
-    public static boolean isFibonacci(int num)
+    public static boolean isFibonacci(int num1)
     {
         int a = 1;
         int b = 1;
         for(int i=0;i<Integer.MAX_VALUE;i++)
         {
-            if(num == a || num == b) //Stops the code immediately if num is equal to either a or b//
+            if(num1 == a || num1 == b) //Stops the code immediately if num is equal to either a or b//
             {
                 break;
             }
-            else if(a>num || b>num) //Required to avoid looping if num is not part of the sequence//
+            else if(a>num1 || b>num1) //Required to avoid looping if num is not part of the sequence//
             {
                 return false;
             }
@@ -60,7 +60,7 @@ public class KLiuLib {
                 a = a + b;
                 b = a + b;
         }
-        return(num == a || num == b);
+        return(num1 == a || num1 == b);
     }
     //Prints out the multiplicative results of the base.//
     public static void multiplicationTable(int base, int range)
@@ -84,7 +84,7 @@ public class KLiuLib {
             }
             else if(i>=Integer.MAX_VALUE-1)//Makes sure that the max value isn't printed out, if the LCM of a,b and c are greater than max value//
             {
-                System.out.println("No LCM was founded");
+                System.out.println("No LCM was found");
                 System.exit(1);
             }
             else
